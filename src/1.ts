@@ -47,19 +47,27 @@ class Produtos {
       this._quantidade = quantidade;
     }
   }
-  desconto():string{
-    let desconto = 0
-    if(this.quantidade <= 10){
-      return `não teve o desconto  e o valor pago foi de ${this.quantidade * this.preco}`
-    }else if(this.quantidade >= 11 && this.quantidade <= 20){
-      desconto = (this.quantidade * this.preco * 0.1) - (this.preco * this.quantidade)
-      return ` teve o desconto de 10% e o valor pago foi de ${desconto}`
-    }else if(this.quantidade >= 21 && this.quantidade <= 50){
-      desconto = (this.quantidade * this.preco * 0.2) - (this.preco * this.quantidade)
-      return ` teve o desconto de 20% e o valor pago foi de ${desconto}`
-    }else{
-      desconto = (this.quantidade * this.preco * 0.25) - (this.preco * this.quantidade)
-      return ` teve o desconto de 25% e o valor pago foi de ${desconto}`
+  desconto(): string {
+    let desconto = 0;
+    if (this.quantidade <= 10) {
+      return `não teve o desconto  e o valor pago foi de ${
+        this.quantidade * this.preco
+      }`;
+    } else if (this.quantidade >= 11 && this.quantidade <= 20) {
+      desconto = this.quantidade * this.preco * 0.1;
+      return ` teve o desconto de ${desconto} e o valor pago foi de  ${
+        this.quantidade * this.preco
+      }`;
+    } else if (this.quantidade >= 21 && this.quantidade <= 50) {
+      desconto = this.quantidade * this.preco * 0.2;
+      return ` teve o desconto de ${desconto} e o valor pago foi de ${
+        this.quantidade * this.preco
+      }}`;
+    } else {
+      desconto = this.quantidade * this.preco * 0.25;
+      return ` teve o desconto de ${desconto}  e o valor pago foi de ${
+        this.quantidade * this.preco
+      }`;
     }
   }
 }
